@@ -5,22 +5,27 @@ Entregue la URL a su repositorio de GitHub. Debe evidenciar por lo menos 4 commi
 #include <stdio.h>
 int main()
 {
+    //Declaracion de variables
     int n;
     int num=0;
-    printf("La suma de Gauss es una iteracion de la funcion 'i' hasta un valor 'n'.\nPor ejemplo n=3 tenemos '1+2+3=6'\nIngrese el valor de n deseado: ");
+
+    //Ingreso del entero a iterar y confirmacion del valor ingresado
+    printf("La suma de Gauss es una iteracion de la funcion 'i' hasta un valor 'n'.\nPor ejemplo para 'n=3' tenemos '1+2+3=6'\nCon esto en mente, por favor ingrese el valor de 'n' deseado: ");
     scanf("%d%*c", &n);
-    printf("El valor de n ingresado es: %d\n", n);
+    printf("El valor de 'n' ingresado es: %d\n", n);
     
+    //Condicional para que el valor sea positivo
     if(n>0)
     {
-        for (int i = 1; i <= n; i++)
+        //Bucle iterativo para realizar la suma
+        for (int i = 1; i <= n; i++)//i++ significa que i aumenta en +1, tambien se pudo haber escrito como i+=1
         {
-            num=num+i;
-            printf("La iteracion n=%d es igual a: %d\n", i, num);
+            num=num+i;//Se guarda el valor de la iteracion
+            printf("La iteracion n=%d es igual a: %d\n", i, num);//Se muestra el valor iterado
         }
-        printf("El resultado es igual a: %d", num);
-    } else {
-        printf("El valor de n ingresado debe ser mayor que cero");
+        printf("El resultado es igual a: %d", num);//Se muestra el resultado final
+    } else {//En caso de no tener el valor correcto de n se muesta un mensaje de error
+        printf("ERROR!!!\nEl valor de 'n' ingresado debe ser un entero mayor que cero");
     }
     return 0;    
 }
